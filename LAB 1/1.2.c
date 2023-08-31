@@ -1,6 +1,10 @@
+//Write a program to create an array of n elements using dynamic
+//memory allocation. Calculate the sum of all the prime elements of the
+//array using function and de-allocate the memory of the array after
+//its use.
 #include<stdio.h>
 #include<stdlib.h>
-int main(int argc, char const *argv[])
+int main()
 {
     int n;
     int* ptr;
