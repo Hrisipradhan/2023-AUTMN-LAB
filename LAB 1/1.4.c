@@ -1,10 +1,8 @@
-//Write a menu driven program to create a structure to represent
+//Q4 Write a menu driven program to create a structure to represent
 // complex number and perform the following operation using
 // function :
 // 1. addition of two complex number (call by value)
 // 2. multiplication of two complex number (call by address
-
-//NOTE: SHOWING ERROR IN GCC COMMAND BUT CODE STILL WORKS
 
 
 #include<stdio.h>
@@ -12,7 +10,7 @@ typedef struct COMPLEX{
     int a;
     int b;
 }Complex;
-Complex multiply(Complex *x, Complex *y);
+Complex multiply(Complex *x, Complex *y,Complex *z);
 Complex add(Complex, Complex);
 int main()
 {
@@ -40,7 +38,7 @@ int main()
         printf("\nAfter addition: %d+%di", z.a, z.b);
     }
     else if(m==2){
-        z = multiply(*x, *y);
+        multiply(&x, &y,&z);
         printf("\nAfter multiplication: %d+%di", z.a, z.b);
     }
     else{
@@ -53,11 +51,11 @@ int main()
 
     return 0;
 }
-Complex multiply(Complex *x, Complex *y){
-    Complex z;
-    z.a = (*x.a) * (*y.a) - (*x.b) * (*y.b);
-    z.b = (*x.a) * (*y.b) + (*x.b) * (*y.a);
-    return z;
+Complex multiply(Complex *x, Complex *y,Complex *z){
+    
+    z->a = (x->a * y->a) - (x->b * y->b);
+    z->b = (x->a * y->b) + (x->b * y->a);
+    // return *z;
     }
 Complex add(Complex x, Complex y){
     Complex z;
