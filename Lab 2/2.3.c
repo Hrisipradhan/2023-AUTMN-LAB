@@ -1,5 +1,5 @@
 #include<stdio.h>
-int main(int argc, char const *argv[])
+int main()
 {
     int r,c;
     int a[10][20];
