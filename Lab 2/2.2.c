@@ -2,7 +2,6 @@
 int main(int argc, char const *argv[])
 {
     int a=0;
-    // int matrix[3][3] = { {1, 0, 2}, {3, 6, 8}, {3, 6, 8} };
     int matrix[30][30];
     int i, j;
     int n;
